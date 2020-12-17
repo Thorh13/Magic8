@@ -3,12 +3,16 @@ from random import randrange
 ##what to add
 #confirmation of if that is their question where if the answer no they will be asked again
 # after question has be answered if tey would like another question to be answered
-# reconize a 42 reference with custome reponse
+# reconize a 42 reference with custome reponse (done)
+
 pattern_respond = 'Magic8: So that\'s what you want to know, is that right?\nMagic8: Well, {}'
 
 def magic8():
-    magic8_question()
-    response = pattern_respond.format(str(magic8_response()))
+    question = str(magic8_question())
+    if "meaning of life" in question:
+        response = pattern_respond.format(str(42))
+    else:
+        response = pattern_respond.format(str(magic8_response()))
     print(response)
 
 def magic8_question():
