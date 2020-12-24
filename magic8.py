@@ -34,7 +34,7 @@ def magic8_response():
 
 def get_list_of_responses():
     # The File magic8.txt contains the original responses found on the icosahedron (20-sided figure) inside the ball
-    infile = open("magic8.txt", 'r')
+    infile = open("magic8_responses.txt", 'r')
     list_responses = [line.rstrip() for line in infile]
     infile.close()
     return list_responses
