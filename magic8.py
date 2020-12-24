@@ -41,12 +41,17 @@ def get_list_of_responses():
 
 def magic8_again():
     ask_again = input('Would you like to ask Magic8 another question?(y/n) \t')
+    ask_again = ask_again.lower()
+    
     if ask_again == 'y':
         print('\nMagic8: Oh, you want to know more do you!')
         magic8()
-    else:
+    elif ask_again == 'n':
         print(pattern_magic.format(str('DISAPPEARED INTO')))
         return
+    else:
+        print('Invalid Entry.\n')
+        magic8_again()
 
 print(pattern_magic.format(str('APPEARED FROM')))
 magic8()
